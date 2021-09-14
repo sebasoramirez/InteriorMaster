@@ -1,0 +1,367 @@
+/* *,
+*::after,
+*::before {
+  box-sizing: inherit;
+} */
+
+body {
+  background-color: #181719;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex-grow: 1;
+}
+
+label {
+  font-size: 28.5px;
+  color: #f2f2f2;
+  margin-right: 5px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#burguer {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* Desaparece el listado de la hamburguesa y el checkbox*/
+ul {
+  display: none;
+  text-decoration: none;
+}
+
+input {
+  /* display: none; */
+  z-index: 2;
+}
+
+/* Cuando se presione el checkbox despliegue el menu */
+
+input:checked ~ ul {
+  display: block;
+  position: absolute;
+  margin-top: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  max-width: auto;
+  max-height: 100%;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  margin: 25px;
+}
+
+li {
+  font-family: "Montserrat", sans-serif;
+  /* display: block; */
+  margin: 15px;
+  color: white;
+  padding: 10px;
+  list-style: none;
+  /* border-bottom: 1px solid grey; */
+}
+
+#link1 {
+  border-bottom: 2px solid #ffffff;
+  padding: 5px;
+}
+
+#button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 31px;
+  width: 103px;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#interior {
+  color: #fff;
+  font-family: "Crimson Pro", serif;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 15.56px;
+  text-decoration: none;
+}
+
+#title {
+  font-family: "Lora", serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 46.08px;
+}
+
+#paragraph {
+  width: 250px;
+  height: 85px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.07px;
+}
+
+#read {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17.07px;
+}
+
+#arrow {
+  color: #fff;
+  font-size: 18.79px;
+  width: 18.79px;
+  height: 6.58px;
+}
+a {
+  text-decoration: none;
+}
+
+#photo1 {
+  width: 391.06px;
+  height: 279.34px;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 17% 38% 38% 7%;
+  grid-template-rows: repeat(17, auto);
+}
+
+.container .item:nth-child(1) {
+  grid-column: 1/5;
+  grid-row: 1/15;
+  background-color: #181719;
+}
+
+.container .item:nth-child(2) {
+  grid-column: 2/4;
+  grid-row: 13/18;
+  background-color: #181719;
+}
+
+#card {
+  width: 300px;
+  height: 138px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 25%);
+}
+
+#photo2 {
+  width: 62.2px;
+  height: 52.68px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  padding: 15.61px;
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
+h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14.63px;
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+
+#cardText {
+  font-family: "Montserrat", sans-serif;
+  color: #828282;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12.19px;
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+
+#cardTitle {
+  font-family: "Lora", serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.04px;
+  grid-column: 1/3;
+  grid-row: 3/5;
+  margin-left: 19px;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17.07px;
+  color: #bdbdbd;
+
+  max-width: 100%;
+  height: auto;
+}
+
+#name {
+  color: #bdbdbd;
+  margin-left: 2px;
+  margin-right: 2px;
+  text-decoration: underline;
+}
+
+/* MEDIA QUERYS to Desktop */
+
+@media screen and (min-width: 576px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    display: none;
+  }
+
+  #button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 102px;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 35px;
+    margin-left: 60px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 40% 26.5% 26.5% 7%;
+    grid-template-rows: repeat(17, auto);
+  }
+
+  #title {
+    font-family: "Lora", serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 61.44px;
+  }
+
+  #paragraph {
+    width: 410px;
+    height: 145px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.26px;
+  }
+
+  #read {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.94px;
+  }
+
+  #photo1 {
+    width: 821.11px;
+    height: 586.53px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  #photo2 {
+    width: 85px;
+    height: 72px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin: 14px;
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+
+  #card {
+    width: 410px;
+    height: 189px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 25%);
+  }
+
+  #cardTitle {
+    font-family: "Lora", serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30.72px;
+    grid-column: 1/3;
+    grid-row: 3/5;
+    margin-left: 26px;
+    margin-top: 40px;
+  }
+  .container .item:nth-child(2) {
+    grid-column: 2/4;
+    grid-row: 13/18;
+    background-color: #181719;
+  }
+
+  input::after ~ ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .link {
+    text-decoration: none;
+    color: white;
+    margin: 25px;
+  }
+
+  li {
+    font-family: "Montserrat", sans-serif;
+    /* display: block; */
+    margin: 15px;
+    color: white;
+    padding: 10px;
+    list-style: none;
+    /* border-bottom: 1px solid grey; */
+  }
+
+  #link1 {
+    border-bottom: 2px solid #ffffff;
+    padding: 5px;
+  }
+}
